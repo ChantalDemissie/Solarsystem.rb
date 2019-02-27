@@ -24,6 +24,12 @@ class SolarSystem
     return str
   end
 
-  def SolarSystem_find_planet_by_name
+  def find_planet_by_name(planet_name)
+    @planets.each do |planet|
+      if planet_name.upcase == planet.name.upcase
+        return planet
+      end
+    end
+    return nil
   end
 end
